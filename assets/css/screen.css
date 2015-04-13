@@ -1,0 +1,122 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 avr. 2015, 12:17:46
+    Author     : taliou
+*/
+body{
+    
+    background-color:#ddd;
+}
+
+#main{
+    width: 92%;
+    margin: 45px;
+    margin-top: 0px;
+    background-color: #FFFFFF;
+}
+
+.container {
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+}
+
+#holl_content{
+    background-color: #666;
+}
+
+#header{
+    width: 100%;
+    height: auto;
+    background-color: blue;
+}
+
+
+#header_top{
+    width: 100%;
+    /*height: 55px;*/
+    /*background-color: #cb2027;*/
+}
+#navbar1 {
+    background-color: #ffcc00;
+    color: #FFFFFF;
+}
+
+/*#header_right{
+    width: 34%;
+    height: auto;
+    float:right;
+    background-color: #99BC99;
+}*/
+
+#image_deroulante{
+    width: auto;
+    height: auto;
+    margin-top: 0px;
+    background-color: #99BC99;
+}
+
+#sosial_network{
+    width: auto;  
+    float: left;
+    /*background-color: #FFFFFF;*/
+    background-color: #ffcc00;
+}
+#searchbox{
+    width: auto;  
+    float: right;
+    background-color: #cb2027;
+}
+#menu{
+    width: auto;
+    float: right;
+    background-color: #8F5B00;
+}
+#menu ul, #menu ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li {
+    float: left;
+    padding: 2px 5px;
+}
+
+#menu ul li a:link,
+#menu ul li a:visited{
+    text-decoration: none;
+}
+
+#menu ul li a:hover {
+    text-decoration: underline;
+}
+
+#sidebar{
+    height: auto;
+    width: 30%;
+    float:right;
+    background-color: #00620C;
+}
+#content{
+    width: 70%;
+    height: auto;
+    background-color: #FFFFFF;
+}
+
+#footer{
+    height: 200px;
+    background-color: tomato;
+}
+
+#vote_panel{
+    height: 300px;
+    margin: 20px;
+    background-color: #444;
+}
+
