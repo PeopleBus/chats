@@ -13,7 +13,7 @@
 
                     <div class="accordion-heading">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<?php echo '' . $candidate->id; ?>">
-                            <img src="<?php echo img_url($candidate->photoname); ?>" class="img-rounded" height="200px" width="300px">
+                            <img src="<?php echo base_url() . 'assets/images/' . $candidate->photoname; ?>" class="img-rounded" height="200px" width="300px">
                             <!--</a>-->
                             <h3><?php echo '' . $candidate->firstname . ' ' . $candidate->lastname; ?></h3>
                             <!--<br />-->
@@ -33,7 +33,7 @@
                     <div id="collapse<?php echo '' . $candidate->id; ?>" class="accordion-body collapse">
                         <div class="accordion-inner">
                             <?php echo '' . $candidate->history; ?>
-
+                            <br /><br />
                             <form class="" method="post" action="">
                                 <fieldset>
                                     <!--<legend>Inscrivez-vous</legend>-->
@@ -54,7 +54,7 @@
                                     <!--<div class="control-group">-->
                                         <label class="control-label" for="comment">Commentaire</label>
                                         <div class="controls">
-                                            <input type="text" id="prenom" name="prenom" value="" placeholder="Entrez votre prenom">
+                                            <!--<input type="text" id="prenom" name="prenom" value="" placeholder="Entrez votre prenom">-->
                                             <textarea value="" placeholder="Pourquoi votez pour ce candidat ?"></textarea>
                                         </div>
                                     <!--</div>-->
