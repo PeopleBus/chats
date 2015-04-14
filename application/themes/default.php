@@ -10,7 +10,7 @@
 
 <!--<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $charset; ?>" />-->
             <?php foreach ($css as $url): ?>
-        <!--<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $url; ?>" />-->
+            <!--<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $url; ?>" />-->
             <?php endforeach; ?>
             <link rel="stylesheet" href="<?php echo base_url("assets/css/screen.css"); ?>" />
             <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
@@ -29,9 +29,35 @@
     </head>
 
     <body>
-        
-        <div id="contenu">
-            <?php echo $output; ?>
+        <div id="main" class="container">
+
+            <div id="header">
+
+                <?php $this->load->view("templates/header"); ?>
+
+            </div>
+            <div id="holl_content"  >
+                <div class="row-fuild">
+                    <div id="sidebar">
+                        <?php $this->load->view("templates/sidebar"); ?>
+                    </div>
+
+                    <div id="content">
+                        <p>Electo-sondage est un site web de sondage prelectorale et postelectorale togolaise...</p>
+                        <div id="contenu">
+                            <?php echo $output; ?>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="footer">
+
+                <?php $this->load->view("templates/footer"); ?>
+            </div>
+
         </div>
 
         <?php foreach ($js as $url): ?>

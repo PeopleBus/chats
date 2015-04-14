@@ -28,8 +28,8 @@
         <div class="collapse navbar-collapse" id="navbar1">
             
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li class="active"><a href="/sondage/index.php/home/index.html">Home</a></li>
+                <li><a href="/sondage/index.php/home/about.html">About</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Faq</a></li>
                 <li><a href="#">Services</a></li>
