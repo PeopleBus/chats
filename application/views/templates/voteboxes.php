@@ -1,94 +1,88 @@
-<div id="vote_panel">
-    <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion"
-                       href="#collapseOne">
-                        Click me to exapand. Click me again to collapse.
-                        Section 1--hide method
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred 
-                    nesciunt sapiente ea proident. Ad vegan excepteur butcher vice 
-                    lomo.
+<ul class="thumbnails">
+
+    <div class="accordion" id="accordion2">
+
+        <?php
+//        $percent = 0;
+//        if ($total_all_vote > 0) {
+//            $percent = ($candidate->total_vote / $total_all_vote) * 100;
+//        } else {
+//            $percent = 0;
+//        }
+        ?>
+
+        <?php
+        foreach ($all_candidates->result() as $candidate) {
+            ?>
+
+            <li class="span3">
+                <div class="thumbnail">
+
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<?php echo '' . $candidate->id; ?>">
+                            <img src="<?php echo img_url($candidate->photoname); ?>" class="img-rounded" height="200px" width="300px">
+                            <!--</a>-->
+                            <h3><?php echo '' . $candidate->firstname . ' ' . $candidate->lastname; ?></h3>
+                            <!--<br />-->
+                            <p>Total de votes : <?php echo '' . $candidate->total_vote; ?></p>
+                            <?php
+                            $percent = 0;
+                            if ($total_all_vote > 0) {
+                                $percent = ($candidate->total_vote / $total_all_vote) * 100;
+                            } else {
+                                $percent = 0;
+                            }
+                            ?>
+                            <p>Pourcentages de votes : <?php echo '' . $percent . '%'; ?></p>
+                        </a>
+                    </div>
+
+                    <div id="collapse<?php echo '' . $candidate->id; ?>" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <?php echo '' . $candidate->history; ?>
+
+<!--                            <form class="form-horizontal form-actions" method="post" action="">
+                                <fieldset>
+                                    <legend>Inscrivez-vous</legend>
+                                    <div class="control-group">
+                                        <label class="control-label" for="nom">Nom</label>
+                                        <div class="controls">
+                                            <input type="text" id="nom" name="nom" value="<?php // echo set_value('nom'); ?>" placeholder="Entrez votre nom">
+                                        </div>
+                                        <?php // echo form_error('nom'); ?>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label" for="prenom">Prenom</label>
+                                        <div class="controls">
+                                            <input type="text" id="prenom" name="prenom" value="<?php // echo set_value('prenom'); ?>" placeholder="Entrez votre prenom">
+                                        </div>
+                                        <?php // echo form_error('prenom'); ?>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label" for="comment">Commentaire</label>
+                                        <div class="controls">
+                                            <input type="text" id="prenom" name="prenom" value="<?php // echo set_value('prenom');  ?>" placeholder="Entrez votre prenom">
+                                            <textarea value="<?php // echo set_value(''); ?>" placeholder="Pourquoi votez pour ce candidat ?"></textarea>
+                                        </div>
+                                        <?php // echo form_error('comment'); ?>
+                                    </div>
+
+
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-primary">S'inscrire</button>
+                                    </div>
+                                </fieldset>
+                            </form>-->
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-        </div>
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion"
-                       href="#collapseTwo">
-                        Click me to exapand. Click me again to collapse.
-                        Section 2--show method
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred 
-                    nesciunt sapiente ea proident. Ad vegan excepteur butcher vice 
-                    lomo.
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion"
-                       href="#collapseThree">
-                        Click me to exapand. Click me again to collapse.
-                        Section 3--toggle method
-                    </a>
-                </h4> 
-                TUTORIALS POINT
-                Simply Easy Learning
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred 
-                    nesciunt sapiente ea proident. Ad vegan excepteur butcher vice 
-                    lomo.
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-warning">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion"
-                       href="#collapseFour">
-                        Click me to exapand. Click me again to collapse.
-                        Section 4--options method
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseFour" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred 
-                    nesciunt sapiente ea proident. Ad vegan excepteur butcher vice 
-                    lomo.
-                </div>
-            </div>
-        </div>
+            </li>
+
+            <?php
+        }
+        ?>
     </div>
-    <script type="text/javascript">
-        $(function() {
-            $('#collapseFour').collapse({
-                toggle: false
-            })
-        });
-        $(function() {
-            $('#collapseTwo').collapse('show')
-        });
-        $(function() {
-            $('#collapseThree').collapse('toggle')
-        });
-        $(function() {
-            $('#collapseOne').collapse('hide')
-        });
-    </script>
-</div>
+</ul>

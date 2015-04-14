@@ -11,6 +11,6 @@
  *
  * @author senabolo
  */
-class user_candidate {
+class User_candidate {
     //put your code here
 }
