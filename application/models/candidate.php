@@ -25,21 +25,16 @@ class Candidate extends CI_Model {
 
     function get_all($limit = 10000, $offset = 0) {
         $this->db->from('candidates');
-//        $this->db->join('persons', 'persons.id = users.person_id');
-//        $this->db->where('persons.actif', 1);
-        $this->db->order_by("lastname", "asc");
+        $this->db->order_by("position", "asc");
         $this->db->limit($limit);
         $this->db->offset($offset);
         return $this->db->get();
     }
     
     
-    function get_all_by_position($limit = 10000, $offset = 0) {
+    function get_all_by_total_vote($limit = 10000, $offset = 0) {
         $this->db->from('candidates');
-//        $this->db->join('persons', 'persons.id = users.person_id');
-//        $this->db->where('persons.actif', 1);
-        $this->db->order_by("position", "desc");
-        $this->db->order_by("lastname", "asc");
+        $this->db->order_by("total_vote", "desc");
         $this->db->limit($limit);
         $this->db->offset($offset);
         return $this->db->get();

@@ -3,15 +3,6 @@
     <div class="accordion" id="accordion2">
 
         <?php
-//        $percent = 0;
-//        if ($total_all_vote > 0) {
-//            $percent = ($candidate->total_vote / $total_all_vote) * 100;
-//        } else {
-//            $percent = 0;
-//        }
-        ?>
-
-        <?php
         foreach ($all_candidates->result() as $candidate) {
             ?>
 
@@ -20,7 +11,7 @@
 
                     <div class="accordion-heading">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<?php echo '' . $candidate->id; ?>">
-                            <img src="<?php echo img_url($candidate->photoname); ?>" class="img-rounded" height="200px" width="300px">
+                            <img src="<?php echo base_url() . 'assets/images/' . $candidate->photoname; ?>" class="img-rounded" height="200px" width="300px">
                             <!--</a>-->
                             <h3><?php echo '' . $candidate->firstname . ' ' . $candidate->lastname; ?></h3>
                             <!--<br />-->
@@ -40,41 +31,52 @@
                     <div id="collapse<?php echo '' . $candidate->id; ?>" class="accordion-body collapse">
                         <div class="accordion-inner">
                             <?php echo '' . $candidate->history; ?>
+                            <br /><br />
+                            <?php
+                            echo form_open('candidate/vote/', array('id' => 'vote_form', "class" => "form-horizontal", "name" => "vote_form"));
+                            ?>
+                            <!--<form class="" method="post" action="">-->
+                            <fieldset>
+                                <!--<legend>Inscrivez-vous</legend>-->
+                                <!--<div class="control-group">-->
+                                <label class="control-label" for="nom">Nom</label>
+                                <div class="controls">
+                                    <input type="text" id="nom" name="nom" value="" placeholder="Entrez votre nom">
+                                </div>
+                                <!--</div>-->
 
-<!--                            <form class="form-horizontal form-actions" method="post" action="">
-                                <fieldset>
-                                    <legend>Inscrivez-vous</legend>
-                                    <div class="control-group">
-                                        <label class="control-label" for="nom">Nom</label>
-                                        <div class="controls">
-                                            <input type="text" id="nom" name="nom" value="<?php // echo set_value('nom'); ?>" placeholder="Entrez votre nom">
-                                        </div>
-                                        <?php // echo form_error('nom'); ?>
-                                    </div>
+                                <!--                                    <div class="control-group">
+                                                                        <label class="control-label" for="prenom">Prenom</label>
+                                                                        <div class="controls">
+                                                                            <input type="text" id="prenom" name="prenom" value="" placeholder="Entrez votre prenom">
+                                                                        </div>
+                                                                    </div>-->
 
-                                    <div class="control-group">
-                                        <label class="control-label" for="prenom">Prenom</label>
-                                        <div class="controls">
-                                            <input type="text" id="prenom" name="prenom" value="<?php // echo set_value('prenom'); ?>" placeholder="Entrez votre prenom">
-                                        </div>
-                                        <?php // echo form_error('prenom'); ?>
-                                    </div>
+                                <!--<div class="control-group">-->
+                                <label class="control-label" for="comment">Commentaire</label>
+                                <div class="controls">
+                                    <!--<input type="text" id="prenom" name="prenom" value="" placeholder="Entrez votre prenom">-->
+                                    <textarea value="" placeholder="Pourquoi votez pour ce candidat ?"></textarea>
+                                </div>
+                                <!--</div>-->
 
-                                    <div class="control-group">
-                                        <label class="control-label" for="comment">Commentaire</label>
-                                        <div class="controls">
-                                            <input type="text" id="prenom" name="prenom" value="<?php // echo set_value('prenom');  ?>" placeholder="Entrez votre prenom">
-                                            <textarea value="<?php // echo set_value(''); ?>" placeholder="Pourquoi votez pour ce candidat ?"></textarea>
-                                        </div>
-                                        <?php // echo form_error('comment'); ?>
-                                    </div>
+                                <!--                                    <div class="control-group">-->
+
+                                <div class="">
+                                    <label class="" for="diaspora">Diaspora</label>
+                                    <input type="checkbox" name="diaspora" id="diaspora" value="Diasporaz" checked/>
+
+                                </div>
+                                <!--</div>-->
 
 
-                                    <div class="form-actions">
-                                        <button type="submit" class="btn btn-primary">S'inscrire</button>
-                                    </div>
-                                </fieldset>
-                            </form>-->
+                                <div class="">
+                                    <button type="submit" class="btn btn-primary">Voter</button>
+                                </div>
+                            </fieldset>
+                            <?php
+                            echo form_close();
+                            ?>
                         </div>
                     </div>
 

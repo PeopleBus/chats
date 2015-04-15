@@ -21,8 +21,9 @@ class Home extends CI_Controller {
 
     public function index() {
         $data['all_candidates'] = $this->Candidate->get_all();
+        $data['all_candidate_by_total_votes'] = $this->Candidate->get_all_by_total_vote();
         $data['total_all_vote'] = $this->Candidate->count_all_vote();
-        
+
 //        $data['last_activity'] = $this->session->userdata('last_activity');
 //        $data['user_agent'] = $this->session->userdata('user_agent');
 //        $data['session_id'] = $this->session->userdata('session_id');
@@ -30,6 +31,8 @@ class Home extends CI_Controller {
 
         $this->load->library('layout');
         $this->layout->view("home", $data);
+//        ->view("templates/sidebar", $data1);
+//        $this->load->view("templates/sidebar", $data1);
 //        $this->load->view("home", $data);
     }
 
@@ -101,6 +104,17 @@ class Home extends CI_Controller {
         } else {
             return TRUE;
         }
+    }
+
+    function vote() {
+        $batch_save_data = array(
+            'company' => $this->input->post('nom'),
+            'address' => $this->input->post('comment')
+        );
+
+//        if ($this->Appconfig->batch_save($batch_save_data)) {
+//            echo json_encode(array('success' => true, 'message' => $this->lang->line('config_saved_successfully')));
+//        }
     }
 
 }

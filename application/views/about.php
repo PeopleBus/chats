@@ -1,8 +1,9 @@
 <div class="row">
-        <div class="col-md-6 col-md-offset-3 well">
-            <?php $attributes = array("class" => "form-horizontal", "name" => "contactform");
-            echo form_open("/sondage/index.php/home/contactform/about", $attributes);?>
-            <fieldset>
+    <div class="col-md-6 col-md-offset-3 well">
+        <?php $attributes = array("class" => "form-horizontal", "name" => "contactform");
+        echo form_open("home/about", $attributes);
+        ?>
+        <fieldset>
             <legend>Contact Form</legend>
             <div class="form-group">
                 <div class="col-md-12">
@@ -49,7 +50,7 @@
                     <input name="submit" type="submit" class="btn btn-primary" value="Send" />
                 </div>
             </div>
-            </fieldset>
-            <?php echo form_close(); ?>
-            <?php echo $this->session->flashdata('msg'); ?>
-        </div>
+        </fieldset>
+        <?php echo form_close(); ?>
+<?php echo $this->session->flashdata('msg'); ?>
+    </div>
