@@ -33,15 +33,19 @@ and open the template in the editor.
 /* facebook button class*/
 .facebookBtn{
     background: #4060A5;
+    /*background: #fff;*/
 }
 
 .facebookBtn:before{ /* use :before to add the relevant icons */
     font-family: "FontAwesome";
     content: "\f09a"; /* add facebook icon */
+    
+    
 }
 
 .facebookBtn:hover{
-    color: #4060A5;
+    /*color: #4060A5;*/
+    background: #fff;
     background: #fff;
     border-color: #4060A5; /* change the border color on mouse hover */
 }
@@ -49,6 +53,7 @@ and open the template in the editor.
 /* twitter button class*/
 .twitterBtn{
     background: #00ABE3;
+    /*background: #fff;*/
 }
 
 .twitterBtn:before{

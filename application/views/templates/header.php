@@ -17,10 +17,10 @@
                     <a class="facebookBtn smGlobalBtn" href="social-media-profile-url" ></a>
                     <a class="twitterBtn smGlobalBtn" href="social-media-profile-url" ></a>
                     <a class="googleplusBtn smGlobalBtn" href="social-media-profile-url" ></a>
-                    <a class="linkedinBtn smGlobalBtn" href="social-media-profile-url" ></a>
+<!--                    <a class="linkedinBtn smGlobalBtn" href="social-media-profile-url" ></a>
                     <a class="pinterestBtn smGlobalBtn" href="social-media-profile-url" ></a>
                     <a class="tumblrBtn smGlobalBtn" href="social-media-profile-url" ></a>
-                    <a class="rssBtn smGlobalBtn" href="social-media-profile-url" ></a>
+                    <a class="rssBtn smGlobalBtn" href="social-media-profile-url" ></a>-->
                 </div>
             <!--</div>-->
         </div>

@@ -1,5 +1,4 @@
 <?php // $this->load->view("templates/voteboxes",$data);       ?>
-<p>sidebar</p>
 <ul class="thumbnails">
     <?php
     $i = 1;
@@ -8,9 +7,9 @@
 
         <!--<ul class="thumbnails">-->
         <li class="span3">
-            <div class="thumbnail">
+            <div id="thumbnail_sidebar" class="thumbnail">
     <!--                <img data-src="holder.js/300x200" alt="">-->
-                <img src="<?php echo base_url() . 'assets/images/' . $candidate->photoname; ?>" class="img-rounded">
+                <img src="<?php echo base_url().'assets/images/'. $candidate->photoname; ?>" class="img-rounded">
                 <h4> <?php 
                 if($candidate->total_vote > 0){
                     echo 'Position N° ' . $i;

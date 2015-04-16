@@ -17,10 +17,10 @@
 
             <div id="content">
                 <p>Electo-sondage est un site web de sondage prelectorale et postelectorale togolaise...</p>
-<?php
-$data2['$all_candidates'] = $all_candidates->result();
-$this->load->view("templates/voteboxes", $data2);
-?>
+                <?php
+                $data2['$all_candidates'] = $all_candidates->result();
+                $this->load->view("templates/voteboxes", $data2);
+                ?>
             </div>
 
         </div>
@@ -29,7 +29,7 @@ $this->load->view("templates/voteboxes", $data2);
 
     <div id="footer">
 
-<?php $this->load->view("templates/footer"); ?>
+        <?php $this->load->view("templates/footer"); ?>
     </div>
 
 </div>
