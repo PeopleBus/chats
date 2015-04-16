@@ -14,8 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/~senabolo/chats';
-//$config['base_url']	= 'http://localhost:81/sondage/';
+//$config['base_url']	= 'http://localhost/~senabolo/chats';
+$config['base_url']	= 'http://localhost:81/chats/';
 
 /*
 |--------------------------------------------------------------------------
